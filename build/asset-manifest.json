@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2444799b.chunk.css",
+    "main.js": "/static/js/main.c5899d43.chunk.js",
+    "main.js.map": "/static/js/main.c5899d43.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.e178b3df.js",
+    "runtime-main.js.map": "/static/js/runtime-main.e178b3df.js.map",
+    "static/css/2.080122a9.chunk.css": "/static/css/2.080122a9.chunk.css",
+    "static/js/2.c89a40cf.chunk.js": "/static/js/2.c89a40cf.chunk.js",
+    "static/js/2.c89a40cf.chunk.js.map": "/static/js/2.c89a40cf.chunk.js.map",
+    "static/js/3.e32e8553.chunk.js": "/static/js/3.e32e8553.chunk.js",
+    "static/js/3.e32e8553.chunk.js.map": "/static/js/3.e32e8553.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.080122a9.chunk.css.map": "/static/css/2.080122a9.chunk.css.map",
+    "static/css/main.2444799b.chunk.css.map": "/static/css/main.2444799b.chunk.css.map",
+    "static/js/2.c89a40cf.chunk.js.LICENSE.txt": "/static/js/2.c89a40cf.chunk.js.LICENSE.txt",
+    "static/media/stylesheet.css": "/static/media/SFProDisplay-UltralightItalic.ede7a30e.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e178b3df.js",
+    "static/css/2.080122a9.chunk.css",
+    "static/js/2.c89a40cf.chunk.js",
+    "static/css/main.2444799b.chunk.css",
+    "static/js/main.c5899d43.chunk.js"
+  ]
+}
