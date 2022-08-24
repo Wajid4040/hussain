@@ -23,6 +23,13 @@ const Web3Alc = createAlchemyWeb3("https://polygon-mainnet.g.alchemy.com/v2/LLAb
 
 const moralisapikey = "bnDWGiOwJ2upZ049C7Ynvz42EGCYVZFd235eSF8kAdACLvZsxvbAVxduOdkmtuGr";
 const polygonscanapikey = "TQ51EPW2DIYTDS664A7CVG74CYERHQ2IQ4";
+const options = new WalletConnectProvider({
+  rpc: {
+    137: 'https://matic-mainnet.chainstacklabs.com',
+  },
+  infuraId: INFURA_ID,
+});
+
 
 const providerOptions = {
 	binancechainwallet: {
@@ -31,12 +38,10 @@ const providerOptions = {
 	 walletconnect: {
            package: WalletConnectProvider,
           options: {
-            rpc: {
-            137: "https://rpc-mainnet.maticvigil.com/",
-           },
-           network: "matic",
-           },
-         },
+               walletconnect: {
+                   package: WalletConnectProvider, // required
+                   options: options,
+            },
 	walletlink: {
 		package: WalletLink, 
 		options: {
