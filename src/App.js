@@ -28,12 +28,15 @@ const providerOptions = {
 	binancechainwallet: {
 		package: true
 	  },
-	  walletconnect: {
-		package: WalletConnectProvider,
-		options: {
-		  infuraId: "3cf2d8833a2143b795b7796087fff369"
-		}
-	},
+	 walletconnect: {
+           package: WalletConnectProvider,
+          options: {
+            rpc: {
+            137: "https://rpc-mainnet.maticvigil.com/",
+           },
+           network: "matic",
+           },
+         },
 	walletlink: {
 		package: WalletLink, 
 		options: {
