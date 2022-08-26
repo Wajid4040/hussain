@@ -114,7 +114,7 @@ render() {
   async function connectwallet() {
     var provider = await web3Modal.connect();
     web3 = new Web3(provider);
-    await provider.send('eth_requestAccounts');
+   // await provider.send('eth_requestAccounts');
     var accounts = await web3.eth.getAccounts();
     account = accounts[0];
     document.getElementById('wallet-address').textContent = account;
