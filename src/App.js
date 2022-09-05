@@ -23,12 +23,7 @@ const Web3Alc = createAlchemyWeb3("https://polygon-mainnet.g.alchemy.com/v2/LLAb
 
 const moralisapikey = "bnDWGiOwJ2upZ049C7Ynvz42EGCYVZFd235eSF8kAdACLvZsxvbAVxduOdkmtuGr";
 const polygonscanapikey = "TQ51EPW2DIYTDS664A7CVG74CYERHQ2IQ4";
-const options = new WalletConnectProvider({
-  rpc: {
-    137: 'https://matic-mainnet.chainstacklabs.com',
-  },
-  infuraId: INFURA_ID,
-});
+
 
 
 const providerOptions = {
@@ -40,7 +35,7 @@ const providerOptions = {
       package: WalletConnectProvider,
       options: {
         rpc: {
-          137: 'https://bsc-dataseed1.binance.org'
+          137: 'https://polygon-rpc.com'
         },
         chainId: 137
       }
@@ -128,8 +123,8 @@ render() {
     account = accounts[0];
     console.log(accounts);
     document.getElementById('wallet-address').textContent = account;
-    contract = new web3.eth.Contract(ABI, NFTCONTRACT);
-    vaultcontract = new web3.eth.Contract(VAULTABI, STAKINGCONTRACT);
+    contract = new newWeb3.eth.Contract(ABI, NFTCONTRACT);
+    vaultcontract = new newWeb3.eth.Contract(VAULTABI, STAKINGCONTRACT);
     var getstakednfts = await vaultcontract.methods.tokensOfOwner(account).call();
     document.getElementById('yournfts').textContent = getstakednfts;
     var getbalance = Number(await vaultcontract.methods.balanceOf(account).call());
