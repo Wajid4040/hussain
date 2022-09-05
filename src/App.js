@@ -35,13 +35,17 @@ const providerOptions = {
 	binancechainwallet: {
 		package: true
 	  },
+	
 	 walletconnect: {
-           package: WalletConnectProvider,
-          options: {
-               walletconnect: {
-                   package: WalletConnectProvider, // required
-                   options: options,
-            },
+      package: WalletConnectProvider,
+      options: {
+        rpc: {
+          137: 'https://bsc-dataseed1.binance.org'
+        },
+        chainId: 137
+      }
+    },
+	
 	walletlink: {
 		package: WalletLink, 
 		options: {
@@ -55,12 +59,17 @@ const providerOptions = {
 	  },
 };
 
+
+
+
 const web3Modal = new Web3Modal({
-	network: "rinkeby",
-	theme: "dark",
-	cacheProvider: true,
-	providerOptions 
-  });
+  network: "mainnet", // optional
+  cacheProvider: true, // optional
+  providerOptions // required
+});
+
+
+
 class App extends Component {
 	constructor() {
 		super();
@@ -113,10 +122,11 @@ render() {
 
   async function connectwallet() {
     var provider = await web3Modal.connect();
-    web3 = new Web3(provider);
-   // await provider.send('eth_requestAccounts');
-    var accounts = await web3.eth.getAccounts();
+    await web3Modal.toggleModal();
+    const newWeb3 = new Web3(provider);
+    const accounts = await newWeb3.eth.getAccounts();
     account = accounts[0];
+    console.log(accounts);
     document.getElementById('wallet-address').textContent = account;
     contract = new web3.eth.Contract(ABI, NFTCONTRACT);
     vaultcontract = new web3.eth.Contract(VAULTABI, STAKINGCONTRACT);
