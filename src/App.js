@@ -27,9 +27,6 @@ const polygonscanapikey = "TQ51EPW2DIYTDS664A7CVG74CYERHQ2IQ4";
 
 
 const providerOptions = {
-	binancechainwallet: {
-		package: true
-	  },
 	
 	 walletconnect: {
       package: WalletConnectProvider,
@@ -41,17 +38,7 @@ const providerOptions = {
       }
     },
 	
-	walletlink: {
-		package: WalletLink, 
-		options: {
-		  appName: "Net2Dev NFT Minter", 
-		  infuraId: "3cf2d8833a2143b795b7796087fff369",
-		  rpc: "", 
-		  chainId: 4, 
-		  appLogoUrl: null, 
-		  darkMode: true 
-		}
-	  },
+	
 };
 
 
